@@ -1,9 +1,11 @@
-import Clicker from "../components/Clicker";
+import Productos from "../components/Productos";
 
 const Sale = () => {
-    
     return (
-        <Clicker/>
+        <>
+            <h1>SALES!</h1>
+            <Productos/>
+        </>
     )
 }
 

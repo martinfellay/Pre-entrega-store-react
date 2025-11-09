@@ -10,17 +10,17 @@ const Formulario = () => {
 	}
 
 	return (
-    <form onSubmit={manejarEnvio}>
-      <input
+		<form onSubmit={manejarEnvio}>
+			<input
 				value={nombre} 
 				type="text"
 				onChange={evento => setNombre(evento.target.value)}
-		  />
+			/>
 			<button type="submit">
 				Enviar
 			</button>
-    </form>
-  );
+		</form>
+    );
 };
 
 export default Formulario;

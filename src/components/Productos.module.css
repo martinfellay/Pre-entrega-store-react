@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+.imagen {
+  height: 450px;
+  width: 450px;
+  margin: 20px;
+}
+
+.panel {
+  flex: 1;
+}
+
+.botonAgregarProducto {
+  font-weight: 600;
+  font-stretch: extra-condensed;
+  background-color: rgb(255 210 125);
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 22px;
+}
+
+.productoItem {
+  margin: 20px 0;
+  padding: 22px 0px;
+  border: 1px solid gray; 
+  cursor: pointer; 
+  background-color: white; 
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imgcontainer{
+  position: relative;
+}
+
+.colcontainer{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+h2,p{
+  margin: 0;
+}

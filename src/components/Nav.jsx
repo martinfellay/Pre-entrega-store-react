@@ -1,16 +1,26 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import styles from './Navbar.module.css'; 
+import { useAuthContext } from '../context/AuthContext';
 
-const Nav = () => { 
-    return (  
-        <nav style={{ backgroundColor: "#333", color: "white", padding: "10px" }}>  
-            <ul style={{ listStyle: "none", display: "flex", justifyContent: "space-around", margin: 0 }}>  
-                <li><Link to="/" style={{textDecoration:"none", color:"white"}}> Inicio </Link></li>
-                <li><Link to="contacto" style={{textDecoration:"none", color:"white"}}> Contacto </Link></li>
-                <li><Link to="sale" style={{textDecoration:"none", color:"white"}}> SALE </Link></li>
-            </ul>  
-        </nav>  
-    );  
+const Nav = () => {
+    const { usuario } = useAuthContext();
+    const esAdmin = usuario === 'admin';
+
+    return(
+        <nav>
+            <ul className={styles.lista}>
+                <li className={styles.item}>
+                    <Link to="/" className={styles.link}>Inicio</Link>
+                    <Link to="/contacto" className={styles.link}>Contacto</Link>
+                    <Link to="/sale" className={styles.link}>SALE</Link>
+                    {esAdmin && 
+                        <Link to="/admin" className={styles.link}>Admin</Link>
+                    }
+                </li>
+            </ul>
+        </nav>
+    );
 }
 
 export default Nav; 
