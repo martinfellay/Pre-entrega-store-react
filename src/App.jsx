@@ -13,6 +13,7 @@ import Carrito from "./components/Carrito";
 
 import DetalleProducto from "./routes/DetalleProducto.jsx";
 import RutaProtegida from "./components/RutaProtegida";
+import Privacity from "./components/Politicies.jsx";
 
 
 
@@ -24,7 +25,8 @@ function App() {
         <Route path={"/"} element={<Inicio />} />
         <Route path={"/contacto"} element={<Contacto />} />
         <Route path={"/sale"} element={<Sale />} />
-        <Route path="/login" element={<Login />} />v
+        <Route path="/login" element={<Login />} />
+        <Route path={"/privacity"} element={<Privacity />} />
         <Route path={"/productos/:id"} element={<DetalleProducto />} />
           {/* No se pide para la pre-entrega */}
           <Route

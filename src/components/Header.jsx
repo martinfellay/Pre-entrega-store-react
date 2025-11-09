@@ -16,7 +16,7 @@ const Header = () => {
     <header className={styles.header}>
       {/* Seccion Izquierda: Logo */}
       <div className={styles.logo}>
-        SILICON STORE
+        <Link to="/">SILICON STORE</Link>
       </div>
       {/* Seccion Central: Componente NavBar */}
       <div className={styles.navbarContainer}>
