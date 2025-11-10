@@ -28,7 +28,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path={"/privacity"} element={<Privacity />} />
         <Route path={"/productos/:id"} element={<DetalleProducto />} />
-          {/* No se pide para la pre-entrega */}
           <Route
             path="/carrito"
             element={
@@ -37,7 +36,6 @@ function App() {
               </RutaProtegida>
             }
           />
-          {/* No se pide para la pre-entrega */}
           <Route
             path="/admin"
             element={

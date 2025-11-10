@@ -54,3 +54,10 @@ a{
 h2,p{
   margin: 0;
 }
+
+.ripleDiv {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+  height: 30vh;
+}

@@ -7,6 +7,9 @@ import { CarritoContext } from '../context/CarritoContext';
 import styles from './Productos.module.css'; 
 import AddToCart from '../assets/AddToCart';
 
+import Loading from "../assets/Loading"
+
+
 const Productos = () => {
   
   const [productos, setProductos] = useState([]);
@@ -26,7 +29,7 @@ const Productos = () => {
       .finally(() => setCargando(false))
   },[]);
 
-  if (cargando) return 'Cargando productos...';
+  if (cargando) return <div className={styles.ripleDiv}><Loading/></div>;
   if (error) return error;
 
   return(
